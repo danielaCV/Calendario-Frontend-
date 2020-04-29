@@ -1,0 +1,41 @@
+<meta meta charset=utf-8>
+<p-tabMenu [model]="items1" [activeItem]="items1[0]"></p-tabMenu>
+<br>
+<div style="text-align:center; color: white;">  
+    <h3 class="first">Consulta de evaluadores registrados para la calificación de proyectos</h3>
+</div>
+<br>
+<div class="ui-g">
+<p-panel header="Evaluadores (Profesores)" [style]="{width:'80%', margin: '0 auto'}">
+<p-table [value]="evaluadores" [columns]="cols" [paginator]="true" [rows]="10">
+    <ng-template pTemplate="header">
+        <tr>
+            <th *ngFor="let col of cols">
+                {{col.header}}
+            </th>
+            <!--
+            <th>Identificacion</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Telefono</th>
+            <th>Correo electronico</th>
+            -->
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-datos let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns">
+                {{datos[col.field]}}
+            </td>
+        <!--
+            <td>{{datos.identificacion}}</td>
+            <td>{{datos.nombre}}</td>
+            <td>{{datos.apellidos}}</td>
+            <td>{{datos.telefono}}</td>
+            <td>{{datos.correo}}</td>
+        -->
+        </tr>
+    </ng-template>
+</p-table>
+</p-panel>
+</div>

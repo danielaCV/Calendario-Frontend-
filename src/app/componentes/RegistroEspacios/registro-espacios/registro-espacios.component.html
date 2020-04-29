@@ -1,0 +1,32 @@
+<meta meta charset=utf-8>
+<p-tabMenu [model]="items1" [activeItem]="items1[0]"></p-tabMenu>
+<br>
+<div style="text-align:center; min-width: 10em; position: relative; font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';">   
+<div style="text-align:center; color: white;">  
+    <h3 class="first">Registro de espacios físicos de exposición  para proyectos</h3>
+</div>
+<br>
+<div style="text-align:center; min-width: 10em; position: relative;">  
+<p-card [style]="{width: '30%', margin: '0 auto', background: '#D8D8D8'}"><!--background-color:#FF0000"-->
+    <div style="font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'">
+    <h4 class="first">Nombre del espacio</h4>
+    
+    <input id="input" type="text" size="30" pInputText [(ngModel)]="nombre">
+    
+    <h4 class="first">Número de práctica </h4>
+
+    <input id="input" type="text" size="30" pInputText [(ngModel)]="practica">
+    <br> 
+    <h4 class="first">Dirección del espacio</h4>
+    <input id="input" type="text" size="30" pInputText [(ngModel)]="direccion">
+    <h4 class="first">Capacidad del espacio</h4>
+    <input id="input" type="text" size="30" pInputText [(ngModel)]="capacidad">
+    <br/>
+    <br>
+    <p-button class="orange-button"label="Guardar" (onClick)="guardarespacio()"></p-button>
+    <br/>  
+        </div>  
+        </p-card>    
+    </div>
+</div>
+ 

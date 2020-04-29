@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+  }
+
+  div {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+  }
+
+  .ui-widget, .ui-widget .ui-widget {
+    font-size: 90%;
+}

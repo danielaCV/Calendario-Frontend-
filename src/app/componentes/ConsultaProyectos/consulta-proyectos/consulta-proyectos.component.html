@@ -1,0 +1,32 @@
+<meta meta charset=utf-8>
+<p-tabMenu [model]="items1" [activeItem]="items1[0]"></p-tabMenu>
+<br>
+<div style="text-align:center; color: white;">  
+    <h3 class="first">Consulta de proyectos registrados para presentación en feria</h3>
+</div>
+<br>
+
+<div class="ui-g">
+<p-panel header="Proyectos" [style]="{width:'80%', margin: '0 auto'}">
+<p-table [value]="proyectos" [columns]="cols" [paginator]="true" [rows]="10">
+    <ng-template pTemplate="header" >
+        <tr>
+            <th>Nombre proyecto</th>
+            <th>Numero practica</th>
+            <th>Estudiante 1</th>
+            <th>Estudiante 2</th>
+            <th>Estudiante 3</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-dato>
+        <tr>
+            <td>{{dato.nombre}}</td>
+            <td>{{dato.practica}}</td>
+            <td>{{dato.estudiante1}}</td>
+            <td>{{dato.estudiante2}}</td>
+            <td>{{dato.estudiante3}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+</p-panel>
+</div>
