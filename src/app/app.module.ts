@@ -7,11 +7,12 @@ import { AppComponent } from './app.component';
 import { RegistroEspaciosComponent } from './componentes/RegistroEspacios/registro-espacios/registro-espacios.component';
 import { ConsultaProyectosComponent } from './componentes/ConsultaProyectos/consulta-proyectos/consulta-proyectos.component';
 import { ConsultaEvaluadoresComponent } from './componentes/ConsultaEvaluadores/consulta-evaluadores/consulta-evaluadores.component';
+
 import { TabMenuComponent } from './componentes/tab-menu/tab-menu.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { MenuPrincipalComponent } from './componentes/menu-principal/menu-principal.component';
-
+import { AsignacionFechaComponent } from './componentes/AsignacionFecha/asignacion-fecha/asignacion-fecha.component';
 //Router
 import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
@@ -31,8 +32,7 @@ import {CardModule} from 'primeng/card';
 import {InputTextModule} from 'primeng/inputtext';
 import {TabMenuModule} from 'primeng/tabmenu';
 import {PanelModule} from 'primeng/panel';
-
-
+import {CalendarModule} from 'primeng/calendar';
 
 
 const appRoutes: Routes = [
@@ -40,7 +40,8 @@ const appRoutes: Routes = [
   {path: 'menuprincipal', component: MenuPrincipalComponent}, 
   {path: 'registroespacio', component: RegistroEspaciosComponent}, 
   {path: 'consultaproyecto', component: ConsultaProyectosComponent},
-  {path: 'consultaevaluador', component: ConsultaEvaluadoresComponent}      
+  {path: 'consultaevaluador', component: ConsultaEvaluadoresComponent},
+  {path: 'asignacionfecha', component: AsignacionFechaComponent}         
 
 ];
 
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
     ConsultaEvaluadoresComponent,
     TabMenuComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AsignacionFechaComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +69,7 @@ const appRoutes: Routes = [
     FormsModule,
     TabMenuModule,
     PanelModule,
+    CalendarModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [ServCalendarioService],

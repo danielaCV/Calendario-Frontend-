@@ -7,11 +7,12 @@
 <br>
 <div class="ui-g">
 <p-panel header="Evaluadores (Profesores)" [style]="{width:'80%', margin: '0 auto'}">
-<p-table [value]="evaluadores" [columns]="cols" [paginator]="true" [rows]="10">
-    <ng-template pTemplate="header">
+<p-table [value]="evaluadores" [columns]="cols" [paginator]="true" [rows]="5" sortMode="multiple">
+    <ng-template pTemplate="header" let-cols>
         <tr>
-            <th *ngFor="let col of cols">
+            <th *ngFor="let col of cols" [pSortableColumn]="col.field">
                 {{col.header}}
+                <p-sortIcon [field]="col.field"></p-sortIcon>
             </th>
             <!--
             <th>Identificacion</th>

@@ -8,23 +8,30 @@
 
 <div class="ui-g">
 <p-panel header="Proyectos" [style]="{width:'80%', margin: '0 auto'}">
-<p-table [value]="proyectos" [columns]="cols" [paginator]="true" [rows]="10">
+<p-table [value]="proyectos" [columns]="cols" [paginator]="true" [rows]="5"  sortMode="multiple">
     <ng-template pTemplate="header" >
         <tr>
-            <th>Nombre proyecto</th>
+            <th *ngFor="let col of cols" [pSortableColumn]="col.field">
+                {{col.header}}
+                <p-sortIcon [field]="col.field"></p-sortIcon>
+            </th>
+            <!--<th>Nombre proyecto</th>
             <th>Numero practica</th>
             <th>Estudiante 1</th>
             <th>Estudiante 2</th>
-            <th>Estudiante 3</th>
+            <th>Estudiante 3</th>-->
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-dato>
+    <ng-template pTemplate="body" let-datos let-columns="columns">
         <tr>
-            <td>{{dato.nombre}}</td>
+            <td *ngFor="let col of columns">
+                {{datos[col.field]}}
+            </td>
+            <!--<td>{{dato.nombre}}</td>
             <td>{{dato.practica}}</td>
             <td>{{dato.estudiante1}}</td>
             <td>{{dato.estudiante2}}</td>
-            <td>{{dato.estudiante3}}</td>
+            <td>{{dato.estudiante3}}</td>-->
         </tr>
     </ng-template>
 </p-table>

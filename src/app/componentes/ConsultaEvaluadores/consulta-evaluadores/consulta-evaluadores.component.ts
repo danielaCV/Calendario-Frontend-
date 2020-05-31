@@ -28,6 +28,7 @@ export class ConsultaEvaluadoresComponent implements OnInit {
       {label: 'Registro Espacios', icon: 'fa fa-fw fa-bar-chart', routerLink: ['/registroespacio']},
       {label: 'Consulta Proyectos', icon: 'fa fa-fw fa-bar-chart', routerLink: ['/consultaproyecto']},
       {label: 'Consulta Evaluadores', icon: 'fa fa-fw fa-bar-chart', routerLink: ['/consultaevaluador']},
+      {label: 'Asignacion de fecha', icon: 'fa fa-fw fa-bar-chart', routerLink: ['/asignacionfecha']},
   ];  
 
     this.cargarEvaluadores();

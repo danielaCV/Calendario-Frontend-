@@ -21,6 +21,7 @@ export class MenuPrincipalComponent implements OnInit {
       {label: 'Registro Espacios', icon: 'fa fa-fw fa-bar-chart', routerLink: ['/registroespacio']},
       {label: 'Consulta Proyectos', icon: 'fa fa-fw fa-bar-chart', routerLink: ['/consultaproyecto']},
       {label: 'Consulta Evaluadores', icon: 'fa fa-fw fa-bar-chart', routerLink: ['/consultaevaluador']},
+      {label: 'Asignacion fecha', icon: 'fa fa-fw fa-bar-chart', routerLink: ['/asignacionfecha']}
   ];  
   }
 

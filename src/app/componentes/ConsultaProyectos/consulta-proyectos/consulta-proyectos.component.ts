@@ -27,11 +27,12 @@ export class ConsultaProyectosComponent implements OnInit {
       {label: 'Registro Espacios', icon: 'fa fa-fw fa-bar-chart', routerLink: ['/registroespacio']},
       {label: 'Consulta Proyectos', icon: 'fa fa-fw fa-bar-chart', routerLink: ['/consultaproyecto']},
       {label: 'Consulta Evaluadores', icon: 'fa fa-fw fa-bar-chart', routerLink: ['/consultaevaluador']},
+      {label: 'Consulta Evaluadores', icon: 'fa fa-fw fa-bar-chart', routerLink: ['/consultaevaluador']}
   ];  
 
   this.cargarProyectos();
     this.cols = [
-      {field: "nombre", header: "Nombre"},
+      {field: "nombre", header: "Nombre del proyecto"},
       {field: "practica", header: "Practica de Ingeníeria"},
       {field: "estudiante1", header: "Estudiante 1"},
       {field: "estudiante2", header: "Estudiante 2"},

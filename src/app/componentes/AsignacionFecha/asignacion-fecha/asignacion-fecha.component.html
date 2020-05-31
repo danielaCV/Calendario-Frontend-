@@ -1,0 +1,35 @@
+<meta meta charset=utf-8>
+<p-tabMenu [model]="items1" [activeItem]="items1[0]"></p-tabMenu>
+<br>
+<div style="text-align:center; min-width: 10em; position: relative; font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';">   
+    <div style="text-align:center; color: white;">  
+        <h2 class="first">Fecha de presentación de proyectos</h2>
+    </div>
+<br> 
+<div style="text-align:center; min-width: 10em; position: relative;">  
+    <p-card [style]="{width: '30%', margin: '0 auto', background: '#D8D8D8'}"><!--background-color:#FF0000"-->
+        
+        <div style="font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'">
+        
+            <div class="ui-g-12 ui-md-4; text-align:center; form-group">
+                <h5>Fecha</h5>
+                <p-calendar [(ngModel)]="fecha" [showIcon]="true" [locale]="es" dateFormat="d/mm/yy" showButtonBar="true" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2050"></p-calendar>
+                </div>
+                <div class="ui-g-12 ui-md-4; form-group">
+                <h5>Hora de inicio</h5>
+                <p-calendar [(ngModel)]="horainicio" [showIcon]="true" [timeOnly]="true" [showTime]="true" (onSelect)="onSelect1($event)"></p-calendar>
+                </div>
+                <div class="ui-g-12 ui-md-4; form-group">
+                <h5>Hora final</h5>
+                <p-calendar [(ngModel)]="horafinal" [showIcon]="true" [timeOnly]="true" [showTime]="true" (onSelect)="onSelect($event)"></p-calendar>
+                </div>
+                <div class="form-group">
+                    <h5 class="first">Nombre del proyecto</h5>
+                    <input id="input" type="text" size="30" pInputText [(ngModel)]="proyecto">
+            </div>
+        <p-button label="Guardar" (onClick)="guardarfecha()"></p-button>
+        <br/>  
+            </div>  
+            </p-card>    
+        </div>
+    </div>
